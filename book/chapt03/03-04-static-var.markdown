@@ -122,7 +122,7 @@ zend_do_fetch_static_variable函数的作用就是生成opcode，定义如下：
 ## 4. 执行中间代码
 
 opcode的编译阶段完成后就开始opcode的执行了。
-在Zend/zend_vm_opcodes.h文件中包含所有opcode的宏定义，这些宏丙没有特殊含义，只是作为opcode的唯一标示，
+在Zend/zend_vm_opcodes.h文件中包含所有opcode的宏定义，这些宏并没有特殊含义，只是作为opcode的唯一标示，
 包含本例中相关的如下两个宏的定义：
 
     [c]
