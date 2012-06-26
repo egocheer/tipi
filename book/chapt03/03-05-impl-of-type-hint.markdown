@@ -109,7 +109,7 @@ instanceof 用来测定一个给定的对象是否来自指定的对象类。ins
                 return zend_verify_arg_error(zf, arg_num, cur_arg_info, need_msg, class_name, "none", "" TSRMLS_CC);
             }
             if (Z_TYPE_P(arg) == IS_OBJECT) { // 既然是类对象参数, 传递的参数需要是对象类型
-				// 下面检查这个对象是否是参数提示类的实例对象, 这里是允许传递子类实力对象
+				// 下面检查这个对象是否是参数提示类的实例对象, 这里是允许传递子类实例对象
                 need_msg = zend_verify_arg_class_kind(cur_arg_info, fetch_type, &class_name, &ce TSRMLS_CC);
                 if (!ce || !instanceof_function(Z_OBJCE_P(arg), ce TSRMLS_CC)) {
                     return zend_verify_arg_error(zf, arg_num, cur_arg_info, need_msg, class_name, "instance of ", Z_OBJCE_P(arg)->name TSRMLS_CC);
