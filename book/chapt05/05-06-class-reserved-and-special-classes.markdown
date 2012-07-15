@@ -189,7 +189,7 @@ self::CONSTANT类似的作用域解析符号(::)，这时的self才会作为指�
 		}
 	}
 
-	class B {
+	class B extend A{
 		public static funcB() {
 			echo  "B::funcB()";
 		}
