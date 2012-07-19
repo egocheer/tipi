@@ -176,7 +176,7 @@ free_buckets的计算仅仅与prev_free_block指针和next_free_block指针相�
 也就是zend_mm_free_block->next_free_block和zend_mm_free_block->prev_free_block位置的后移。
 这种不存储zend_mm_free_block数组，仅存储其指针的方式不可不说精妙。虽然在理解上有一些困难，但是节省了内存。
 
-free_buckets列表使用free_bitmap标记是否该双向链表已经使用过时有用。
+free_buckets列表使用free_bitmap标记该双向链表是否已经使用过。
 当有新的元素需要插入到列表时，需要先根据块的大小查找index，
 查找到index后，在此index对应的双向链表的头部插入新的元素。
 
